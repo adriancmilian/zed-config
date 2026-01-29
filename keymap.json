@@ -1,0 +1,68 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      "space f f": [
+        "task::Spawn",
+        { "task_name": "file_finder", "reveal_target": "center" },
+      ],
+      "space w": "pane::CloseActiveItem",
+      "space o": "outline::Toggle",
+      "space g b": "git::Branch",
+      "space g g": "git_panel::ToggleFocus",
+      "space /": "pane::DeploySearch",
+      "space h": "editor::ToggleInlayHints",
+      "space e": "workspace::ToggleLeftDock",
+      "space b d": "pane::CloseActiveItem",
+      "space b l": "pane::CloseItemsToTheLeft",
+      "space b r": "pane::CloseItemsToTheRight",
+      "ctrl-h": "project_panel::ToggleFocus",
+      "ctrl-/": "terminal_panel::Toggle",
+      "ctrl-a": "editor::ToggleCodeActions",
+      "shift-u": "vim::Redo",
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+      "escape escape": "workspace::Save",
+      "] f": "vim::NextMethodStart",
+      "[ f": "vim::PreviousMethodStart",
+      "space g f": [
+        "task::Spawn",
+        { "task_name": "fulltext_search", "reveal_target": "center" },
+      ],
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-l": "editor::ToggleFocus",
+      "space e": "workspace::ToggleLeftDock",
+      "shift-h": "project_panel::ToggleHideHidden",
+      "shift-i": "project_panel::ToggleHideGitIgnore",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-/": "terminal_panel::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+]
