@@ -7,8 +7,32 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "features": {
-    "edit_prediction_provider": "copilot"
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        // Disable basedpyright and enable another language server
+        "ty",
+        "!basedpyright",
+        "...",
+      ],
+    },
   },
   "relative_line_numbers": "enabled",
   "diagnostics": {
@@ -18,17 +42,22 @@
     },
   },
   "project_panel": {
+    "dock": "left",
     "hide_hidden": false,
     "hide_gitignore": false,
   },
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato"
+  },
   "vim_mode": true,
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Gruvbox Light",
-    "dark": "Gruvbox Dark",
+    "dark": "Gruvbox Dark Hard",
   },
 }
